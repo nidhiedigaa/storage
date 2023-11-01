@@ -1,0 +1,39 @@
+local storage, session storage and cookie are the storage mechnism provided by web browsers to store data on client's side or user device
+each browser will have its own local,session and cookie
+
+
+local storage= 
+1.local storage span is for lifetime, it will not expire even when we close the browser or navigate from one browser to another 
+browser
+2.if we want to delete local storage we need to make use of methods 
+3.capacity of local storage is upto 10mb
+4.local storage is same in all the tabs of that respective browser
+in javascript we have localStorage object which contains methods which can be used to manipulate the data
+
+methods of localStorage:
+1.setItem('key',value)
+2.getItem('key')
+3.removeItem('key')
+4.clear()
+5.length
+
+session storage=
+1.session storage expires as soon as we leave the tab or close the browser
+2.session storage span depends on page session
+3.session storage is different for each tab in a browser
+4.capacity is 5mb
+
+methods of sessionStorage:
+1.setItem('key',value)
+2.getItem('key')
+3.removeItem('key')
+4.clear()
+5.length
+
+cookie=
+1.cookie capacity is very small i,e 4kb
+2.we dont have any methods for inserting values into cookie
+3.if we want to delete cookie we need to set an expiration date for it
+4.to add data into cookie we should make use of document.cookie
+
+ex: document.cookie='key=value;expires='+new Date(year.month,date).toUTCstring()
